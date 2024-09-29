@@ -1,0 +1,133 @@
+body
+{
+    text-align: center;
+}
+
+#welcome{
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 50px;
+    text-align: center;
+    color:azure;
+    background-color: #2E8861;
+}
+#bio {
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 50px;
+    text-align: center;
+    background-color:darkslategray;
+    color:azure}
+#Donate{
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 50px;
+    text-align: center;
+    background-color: #2E8861;
+    color:azure;
+    }
+    #Contact {
+        font-family: 'Cinzel Decorative', cursive;
+        padding: 50px;
+        text-align: center;
+        background-color:darkslategray;
+        color:azure;
+
+    }
+h1 {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+h2 {
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+#name{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+.line {
+    height: 6px;
+    background-color: #000;
+    width: 70px;
+    margin: 8px auto;
+}
+#contact iframe
+{
+    width: 100%;
+}
+.contact_1 h3
+{
+    display: inline;
+}
+.contact_1 a
+{
+    text-shadow: none;
+}
+
+
+#videos iframe
+{
+    width: 80%;
+}
+
+
+input
+{
+    background: grey;
+}
+
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-list li a {
+    width: 165px;
+    display: block;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 27px;
+    padding: 10px;
+    font-family: "source-serif-pro", serif !important;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.5s ease, font-weight 0.5s ease;
+}
+
+#logo {
+   
+      width: 50px;  
+      height: 50px;
+    
+      
+
+}
+#About{
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
+
+
+}
+#Donate{
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
+
+
+}
+#Contact{
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
+
+
+}
+
+
+
+
