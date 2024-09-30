@@ -1,159 +1,123 @@
-body
-{
-    text-align: center;
-}
 
-#welcome{
-    font-family: 'Cinzel Decorative', cursive;
-    padding: 50px;
-    text-align: center;
-    color:azure;
-    background-color: #2E8861;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
 }
-#bio {
-    font-family: 'Cinzel Decorative', cursive;
-    padding: 50px;
-    text-align: center;
-    background-color:darkslategray;
-    color:azure}
-#Donate{
-    font-family: 'Cinzel Decorative', cursive;
-    padding: 50px;
-    text-align: center;
-    background-color: #2E8861;
-    color:azure;
-    }
-    #Contact {
-        font-family: 'Cinzel Decorative', cursive;
-        padding: 50px;
-        text-align: center;
-        background-color:darkslategray;
-        color:azure;
-
-    }
-h1 {
-    font-size: 60px;
-    font-family: sans-serif;
-    font-weight: 300;
-}
-h2 {
-    font-size: 50px;
-    font-family: sans-serif;
-    font-weight: 300;
-}
-#name{
-    font-size: 30px;
-    font-family: sans-serif;
-    font-weight: 300;
-}
-
-.line {
-    height: 6px;
-    background-color: #000;
-    width: 70px;
-    margin: 8px auto;
-}
-#contact iframe
-{
+nav{
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 15vh;
+    transition: all 0.4s ease;
 }
-.contact_1 h3
-{
-    display: inline;
+nav.sticky{
+    overflow-x: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.contact_1 a
-{
-    text-shadow: none;
-}
-
-
-#videos iframe
-{
-    width: 80%;
-}
-
-
-input
-{
-    background: grey;
-}
-
-
-.nav-list {
+nav .nav-content{
+    background-color: white;
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+nav .logo img{
+    margin-left: 1vw;
+    width: 20%;
+}
+.nav-content .nav-links{
+    display: flex;
+}
+.nav-content .nav-links li{
     list-style: none;
+    margin: 0 8px;
 }
-
-.nav-list li a {
-    width: 165px;
-    display: block;
+.nav-links li a{
     text-decoration: none;
-    color: #1e1e1e;
-    font-size: 27px;
-    padding: 10px;
-    font-family: "source-serif-pro", serif !important;
+    color: #0E2431;
+    font-size: 1.3vw;
     font-weight: 500;
-    text-align: center;
-    transition: color 0.5s ease, font-weight 0.5s ease;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+    color: #4070f4;
+}
+nav.sticky .nav-links li a{
+    transition: all 0.4s ease;
+}
+#front{
+    overflow-x: hidden;
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    font-size: 4vw;
+}
+#front.sticky {
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
 }
 
-#logo {
-   
-      width: 50px;  
-      height: 50px;
-    
-      
-
+#event{
+    overflow-x: hidden;
+    background-color: white;
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    font-size: 4vw;
 }
-#About{
-    font-size: 40px;
-    font-family: sans-serif;
-    font-weight: 300;
 
-
+#dono{
+    overflow-x: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    font-size: 4vw;
 }
-#Donate{
-    font-size: 40px;
-    font-family: sans-serif;
-    font-weight: 300;
-
-
+#form{
+    overflow-x: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    font-size: 4vw;
 }
-#Contact{
-    font-size: 40px;
-    font-family: sans-serif;
-    font-weight: 300;
 
-
+footer{
+    margin-top: 10vh;
+    overflow-x: hidden;
+    background-color: rgb(75, 73, 73);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 20vh;
+    width: 100vw;
+    font-size: 1.5vw;
 }
-#seeyuh {
-    overflow: hidden;
-    background-color: darkslategray;
-    position: fixed; 
-    top: 0; 
-    width: 100%;}
-  
-
-  #seeyuh a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
- 
-  #seeyuh a:hover {
-    background: #ddd;
-    color: darkslategray;
-  }
-  
- 
-  #main {
-    margin-top: 30px; 
-  }
-
-
-
