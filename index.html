@@ -1,73 +1,278 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tech4Good | Futurz Club</title> 
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech4Good | Futurz Club</title>
+    <link rel="shortcut icon" href="Futurz_Club_Logo_1.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+        * {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #text {
+            height: 100vh;
+            background-image: url(bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #text img {
+            width: 25%;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        #text h1, #text span, #text h2 {
+            font-family: "Ubuntu", sans-serif;
+            transform: translateY(100px);
+            opacity: 0; 
+            animation: slideUp 1.5s forwards ease-in-out 0.5s; 
+        }
+
+        #text h1 {
+            font-size: 3vw;
+        }
+
+        #text h2 {
+            font-size: 2.5vw;
+        }
+
+        #token {
+            margin: 0 1.5vw;
+            height: 100vh;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 2.6vw;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-between;
+            transition: width 1s ease;
+            width: 60%;
+        }
+
+        #form {
+            box-shadow: 3px 3px 3px 10px #7a93dd;
+            height: 100vh;
+            opacity: 0;
+            transition: opacity 1s ease;
+            width: 0;
+            overflow: hidden;
+            transition: width 1s ease;
+        }
+
+        .arrow {
+            cursor: pointer;
+            height: 120px;
+            left: 62%;
+            position: absolute;
+            top: 35%;
+            transform: translateX(-50%) translateY(-50%);
+            transition: transform .1s;
+            transition: left 1s;
+            width: 50px;
+        }
+
+        .arrow-top,
+        .arrow-bottom {
+            background-color: #000000;
+            height: 4px;
+            left: -5px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+
+        .arrow-top:after,
+        .arrow-bottom:after {
+            background-color: #fff;
+            content: '';
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all .15s;
+        }
+
+        .arrow-top {
+            transform: rotate(45deg);
+            transform-origin: bottom right;
+        }
+
+        .arrow-top:after {
+            left: 100%;
+            right: 0;
+            transition-delay: 0s;
+        }
+
+        .arrow-bottom {
+            transform: rotate(-45deg);
+            transform-origin: top right;
+        }
+
+        .arrow-bottom:after {
+            left: 0;
+            right: 100%;
+            transition-delay: .15s;
+        }
+
+        .arrow:hover .arrow-top:after {
+            left: 0;
+            transition-delay: .15s;
+        }
+
+        .arrow:hover .arrow-bottom:after {
+            right: 0;
+            transition-delay: 0s;
+        }
+
+        .arrow:active {
+            transform: translateX(-50%) translateY(-50%) scale(0.9);
+        }
+
+        #leadboard {
+            font-family: "Ubuntu", sans-serif;
+            font-size: 1.4vw;
+            margin-top: 1.5vw;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #7a93dd;
+        }
+
+        th {
+            background-color: #7a93dd;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px); 
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1; 
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <div class="logo">
-                <a href="#"><img src="Futurz_Club_Logo_1.png"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#dono">Donate</a></li>
-                <li><a href="#" style="overflow-y: hidden;">Our Team</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
+    <section id="main">
+        <div id="text">
+            <img src="Futurz_Club_Logo_1.png" alt="logo">
+            <h1><span style="color: #fff; -webkit-text-stroke: 2px black;">Futurz</span><span style="color: #1e1e1e;">&nbsp;Club</span></h1>
+            <span style="font-size: 1.3vw;">Presents</span>
+            <h2>#tech<span style="color: #fff; -webkit-text-stroke: 2px black;">for</span>good</h2>
         </div>
-    </nav>
-    <section id="front">
-        <h1>Futurz Club</h1>
-        <span>Presents</span>
-    </section>
-    <section id="event">
-        <h1>Tech</h1>
-        <h2>For</h2>
-        <h1>Good</h1>
-    </section>
-    <section id="dono">
-        <h2>Got your Token?</h2>
-        <h1>Fill This Form!</h1>
-    </section>
-    <section id="form">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZxK9ZQwxUHP43WUoVfjsKm1AOpwT2UrMkhXhoNnr0R9fZIA/viewform?embedded=true" width="750" height="1200" frameborder="10" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
-    <footer style="display: flex; justify-content: space-between; flex-direction: row;">
-        <section style="display: flex; justify-content: space-between;">
-            <div style="display: flex; flex-direction: column; margin-left: 5vw;">
-                <span>Tech</span>
-                <span>For</span>
-                <span>Good</span>        
+        <div id="token">
+            <span style="margin-top: 3vh;">Got your token? <br><span style="font-size: 2vw;">Fill this form and make yourself count in the leaderboard</span></span>
+            <div class="arrow">
+                <div class="arrow-top"></div>
+                <div class="arrow-bottom"></div>
             </div>
-        </section>
-        <section>
-            <div style="display: flex; flex-direction: column;">
-                <span>Instagram</span>
-                <span>X</span>
-                <span>Mail</span>
-                <span>YouTube</span>
+            <div id="leadboard">
+                <h3>Leaderboard</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Items Donated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardTable">
+                    </tbody>
+                </table>
             </div>
-        </section>
-    </footer>
-<script>
-    let nav = document.querySelector("nav");
-    let front = document.querySelector("#front");
+            <div id="small" style="font-size: 1vw; height: 10vh; background-color: #48D597; margin: 0; width: 100%; display: flex; justify-content: space-around; align-items: center;">
+                <div id="textual" style="color: white; -webkit-text-stroke: #000000 1px; font-size: 1.3vw;">
+                    Futurz Club's <br> #techforgood
+                </div>
+                <div id="social">
+                    <a href="mailto:futurz.afgji@gmail.com " style="text-decoration: none; color: white; -webkit-text-stroke: #000000 1px; margin-right: 1vw;" ><i class='bx bx-envelope' style="font-size: 2vw;"></i></a>
+                    <a href="https://www.instagram.com/futurzclub/" style="text-decoration: none; color: white; -webkit-text-stroke: #000000 1px;"><i class='bx bxl-instagram' style="font-size: 2vw;"></i></a>
+                </div>
+                <div id="loc">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1280.1563007913292!2d77.14872417183734!3d28.581804999844653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir%20Force%20Golden%20Jubilee%20Institute!5e1!3m2!1sen!2sin!4v1727892859837!5m2!1sen!2sin" width="400" height="110" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSfN7zA702rfXnMNljhdOzGNOx0Ngn4z_J9Bu8qeEIoOjXbZnA/viewform?embedded=true" width="750" height="980" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+    <script>
+        const leaderboardData = [];
+
+        function renderLeaderboard(data) {
+            const tableBody = document.getElementById('leaderboardTable');
+            tableBody.innerHTML = "";
+            if (data.length === 0) {
+                const noDataRow = `<tr>
+                                        <td colspan="3">No data currently</td>
+                                    </tr>`;
+                tableBody.innerHTML = noDataRow;
+            } else {
+                data.forEach((entry, index) => {
+                    const row = `<tr>
+                                    <td>${index + 1}</td>
+                                    <td>${entry.name}</td>
+                                    <td>${entry.score}</td>
+                                </tr>`;
+                    tableBody.innerHTML += row;
+                });
+            }
+        }
+
+        document.querySelector('.arrow').addEventListener('click', function () {
+            const form = document.getElementById('form');
+            const token = document.getElementById('token');
+            const arrow = document.querySelector('.arrow');
+            arrow.style.left = '47%';
+            form.style.opacity = '1';
+            form.style.width = '30%';
+            token.style.width = '60%';
+        });
+
+
+        renderLeaderboard(leaderboardData); 
+    </script>
     
-    window.onscroll = function() {
-        if (document.documentElement.scrollTop > 20) {
-            nav.classList.add("sticky");
-        } else {
-            nav.classList.remove("sticky");
-        }
-        if (document.documentElement.scrollTop >= 80) {
-            front.classList.add("sticky");
-        } else {
-            front.classList.remove("sticky");
-        }
-    }
-</script>
 </body>
 </html>
